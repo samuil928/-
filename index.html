@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>SuperMath</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nerdamer/1.1.13/nerdamer.core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nerdamer/1.1.13/Algebra.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nerdamer/1.1.13/Calculus.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nerdamer/1.1.13/Solve.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>SuperMath</h1>
+
+    <input id="expr" type="text" placeholder="Введи выражение…">
+
+    <!-- Кнопки -->
+    <div class="keypad">
+
+        <button onclick="insert('√')">√</button>
+        <button onclick="insert('π')">π</button>
+        <button onclick="insert('^')">^</button>
+        <button onclick="insert('(')">(</button>
+        <button onclick="insert(')')">)</button>
+
+        <button onclick="insert('x')">x</button>
+        <button onclick="insert('x^2')">x²</button>
+        <button onclick="insert('x^3')">x³</button>
+
+        <button onclick="insert('+')">+</button>
+        <button onclick="insert('-')">−</button>
+        <button onclick="insert('*')">*</button>
+        <button onclick="insert('/')">/</button>
+
+        <button onclick="insert('int(')">∫</button>
+        <button onclick="insert('d/dx ')">d/dx</button>
+        <button onclick="insert('simplify(')">simplify</button>
+        <button onclick="insert('expand(')">expand</button>
+
+        <button onclick="insert('solve(')">solve</button>
+        <button onclick="insert('[')">[</button>
+        <button onclick="insert(']')">]</button>
+
+        <button class="clear" onclick="document.getElementById('expr').value=''">C</button>
+        <button class="calculate" onclick="calculate()">=</button>
+    </div>
+
+    <div id="result" class="result">Результат:</div>
+</div>
+
+</body>
+</html>
